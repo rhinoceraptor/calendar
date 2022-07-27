@@ -1,5 +1,6 @@
 import React from 'react'
 import { getWeekDayNarrowFormat } from '../util/dates'
+import './WeekDaysBar.css'
 
 export const WeekDaysBar = () => (
   <div className="week-days-bar">

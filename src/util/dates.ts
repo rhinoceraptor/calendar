@@ -7,3 +7,9 @@ export const getWeekDayNarrowFormat = (weekday: number): string => {
   now.setDate(now.getDate() + (weekday - now.getDay()))
   return now.toLocaleString('default', { weekday: 'narrow' })
 }
+
+export const getYearFormat = (date: Date): string =>
+  date.getFullYear().toString()
+
+export const getMonthFormat = (date: Date): string =>
+  date.toLocaleString('default', { month: 'long' })
