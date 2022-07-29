@@ -38,3 +38,12 @@ export const getFirstDayOfPreviousMonth = (date: Date): Date => {
 export const getFirstDayOfNextMonth = (date: Date): Date => {
   return addNumDays(1, getLastWeekdayOfMonth(date))
 }
+
+export const isSameMonth = (date1: Date, date2: Date): boolean =>
+  date1.getFullYear() === date2.getFullYear() &&
+  date1.getMonth() === date2.getMonth()
+
+export const isSameDay = (date1: Date, date2: Date): boolean =>
+  date1.getFullYear() === date2.getFullYear() &&
+  date1.getMonth() === date2.getMonth() &&
+  date1.getDate() === date2.getDate();

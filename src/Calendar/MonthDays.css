@@ -9,6 +9,35 @@
 .day {
   display: flex;
   width: calc(100% / 7);
+  height: calc(100% / 6);
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.not-current-month {
+  color: #4f5366;
+}
+
+.has-event::before {
+  height: 5px;
+  width: 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #F1FA8C;
+  content: '';
+  position: absolute;
+  white-space: pre;
+  display: inline;
+  transform: translate(0px, 17px);
+}
+
+.now {
+  border: solid #F65555;
+  border-radius: 50%;
 }

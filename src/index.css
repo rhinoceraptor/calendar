@@ -5,5 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1A1B26;
+  color: white;
+  font-size: 25px;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 

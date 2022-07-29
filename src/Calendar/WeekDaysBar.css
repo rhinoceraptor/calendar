@@ -2,6 +2,8 @@
 .week-days-bar {
   display: flex;
   height: calc(100% / 7);
+  color: #8086DE;
+  font-weight: bold;
 }
 
 .week-day {
