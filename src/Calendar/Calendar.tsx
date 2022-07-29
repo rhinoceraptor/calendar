@@ -1,5 +1,5 @@
 import React from 'react'
-import { CurrentMonthBar } from './CurrentMonthBar'
+import { NavBar } from './NavBar'
 import { WeekDaysBar } from './WeekDaysBar'
 import { MonthDays } from './MonthDays'
 import './Calendar.css'
@@ -11,7 +11,7 @@ export type CalendarProps = {
 
 export const Calendar = ({ currentDate, setCurrentDate }: CalendarProps) => (
   <div className="calendar-wrapper">
-    <CurrentMonthBar currentDate={currentDate} setCurrentDate={setCurrentDate} />
+    <NavBar currentDate={currentDate} setCurrentDate={setCurrentDate} />
     <WeekDaysBar />
     <MonthDays currentDate={currentDate} setCurrentDate={setCurrentDate} />
   </div>

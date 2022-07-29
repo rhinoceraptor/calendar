@@ -1,13 +1,13 @@
 import React from 'react'
 import { getYearFormat, getMonthFormat, getFirstDayOfPreviousMonth, getFirstDayOfNextMonth } from '../util/dates'
-import './CurrentMonthBar.css'
+import './NavBar.css'
 
-export type CurrentMonthBarProps = {
+export type NavBarProps = {
   currentDate: Date,
   setCurrentDate (date: Date): void
 }
 
-export const CurrentMonthBar = ({ setCurrentDate, currentDate }: CurrentMonthBarProps) => (
+export const NavBar = ({ setCurrentDate, currentDate }: NavBarProps) => (
   <div className="current-month-bar">
     <button onClick={() => setCurrentDate(new Date())}>Today</button>
     <span className="date">
