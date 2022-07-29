@@ -1,8 +1,13 @@
 
 .week-days-bar {
   display: flex;
+  height: calc(100% / 7);
 }
 
 .week-day {
   display: flex;
+  width: calc(100% / 7);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }

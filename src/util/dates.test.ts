@@ -2,7 +2,8 @@ import {
   getNumDaysInMonth,
   getWeekDayNarrowFormat,
   getYearFormat,
-  getMonthFormat
+  getMonthFormat,
+  getDatesForCurrentMonthView
 } from './dates'
 
 describe('utils/dates', () => {
@@ -77,6 +78,12 @@ describe('utils/dates', () => {
 
     it.each(cases)('should return %p for %p', (monthName, dateString) => {
       expect(getMonthFormat(new Date(dateString))).toEqual(monthName)
+    })
+  })
+
+  describe('getDatesForCurrentMonthView', () => {
+    it.only('should return every date in view for the current month', () => {
+      console.log(getDatesForCurrentMonthView(new Date('2022-07-03T10:00:00.000Z')))
     })
   })
 })

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { CurrentMonthBar } from './CurrentMonthBar'
 import { WeekDaysBar } from './WeekDaysBar'
 import { MonthDays } from './MonthDays'
-import './Calendar.css';
+import './Calendar.css'
 
 export type CalendarProps = {
   currentDate: Date,

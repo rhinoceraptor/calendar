@@ -1,0 +1,8 @@
+
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(400px / 7 * 8);
+  width: 400px;
+  user-select: none;
+}

@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { getDatesForCurrentMonthView } from '../util/dates'
 import './MonthDays.css'
 
 export type MonthDaysProps = {
@@ -6,6 +7,14 @@ export type MonthDaysProps = {
   setCurrentDate (date: Date): void
 }
 
-export const MonthDays = (props: MonthDaysProps) => (
-  <div className="month-days" />
-)
+export const MonthDays = ({ currentDate, setCurrentDate }: MonthDaysProps) => {
+  return (
+    <div className="month-days">
+      {getDatesForCurrentMonthView(currentDate).map(date => (
+        <div className="day" onClick={() => setCurrentDate(date)}>
+          {date.getDate()}
+        </div>
+      ))}
+    </div>
+  )
+}

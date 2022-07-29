@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { Calendar } from './Calendar/Calendar'
-import './App.css';
+import './App.css'
 
 function App() {
   const [currentDate, setCurrentDate] = useState(new Date())
@@ -9,7 +9,7 @@ function App() {
     <div className="app">
       <Calendar currentDate={currentDate} setCurrentDate={setCurrentDate} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
