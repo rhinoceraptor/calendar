@@ -3,8 +3,8 @@ import { getYearFormat, getMonthFormat, getFirstDayOfPreviousMonth, getFirstDayO
 import './NavBar.css'
 
 export type NavBarProps = {
-  currentDate: Date,
-  setCurrentDate (date: Date): void
+  currentDate: Date;
+  setCurrentDate (date: Date): void;
 }
 
 export const NavBar = ({ setCurrentDate, currentDate }: NavBarProps) => (

@@ -1,19 +1,20 @@
 import React from 'react'
+import { Event } from '../types'
 import { getDatesForCurrentMonthView, isSameDay, isSameMonth } from '../util/dates'
 import './MonthDays.css'
 
 export type MonthDaysProps = {
-  currentDate: Date,
-  setCurrentDate (date: Date): void
+  currentDate: Date;
+  setCurrentDate (date: Date): void;
+  events: Array<Event>;
 }
 
-export const MonthDays = ({ currentDate, setCurrentDate }: MonthDaysProps) => {
+export const MonthDays = ({ currentDate, setCurrentDate, events }: MonthDaysProps) => {
   const getDayClassName = (date: Date, i: number): string => [
     'day',
     isSameDay(currentDate, date) ? 'now' : '',
     isSameMonth(currentDate, date) ? '' : 'not-current-month',
-    // TODO change when events are added
-    i % 2 === 0 ? 'has-event' : ''
+    events.some(event => isSameDay(event.startDate, date)) ? 'has-event' : ''
   ].join(' ')
 
   return (
