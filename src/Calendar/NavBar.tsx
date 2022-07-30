@@ -9,7 +9,7 @@ export type NavBarProps = {
 
 export const NavBar = ({ setCurrentDate, currentDate }: NavBarProps) => (
   <div className="current-month-bar">
-    <button onClick={() => setCurrentDate(new Date())}>Today</button>
+    <span className="today-button" onClick={() => setCurrentDate(new Date())}>Today</span>
     <span className="date">
       <span className="month">{getMonthFormat(currentDate)}</span>
       <span className="year">{getYearFormat(currentDate)}</span>
