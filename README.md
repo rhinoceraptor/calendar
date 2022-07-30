@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Calendar
+
+This is a simple calendar app, implemented in React. The UI is laid out using Flexbox, and is responsive.
+The normal desktop view is the calendar side by side with a list of the current selected days' events, and when
+the page is narrowed to a phone width, the events details sections wraps under the calendar.
+
+There currently aren't any meaningful React component tests, but I have the date utility functions well tested.
+
+The events are randomly generated using [Faker](https://fakerjs.dev/) when the page is loaded.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
