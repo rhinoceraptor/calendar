@@ -49,7 +49,7 @@ export const isSameDay = (date1: Date, date2: Date): boolean =>
   date1.getDate() === date2.getDate();
 
 export const formatDateTime = (date: Date): string => [
-  date.getHours() % 12,
+  date.getHours() % 12 || 12,
   ':',
   date.getMinutes() < 10 ? '0' : '',
   date.getMinutes(),

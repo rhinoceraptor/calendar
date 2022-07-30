@@ -13,8 +13,8 @@ export const EventsView = ({ currentDate, events }: EventsViewProps) => (
     {events
       .filter(event => isSameDay(event.startDate, currentDate))
       .sort((a, b) => a.startDate.getHours() - b.startDate.getHours())
-      .map(event => (
-        <div className="event" key={event.name + event.startDate.toString()}>
+      .map((event, i) => (
+        <div className="event" key={event.name + event.startDate.toString() + i}>
           <span className="name">{event.name}</span>
           <span className="time">
             {!event.endDate
