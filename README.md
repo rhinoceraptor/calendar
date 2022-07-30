@@ -3,10 +3,17 @@
 This is a simple calendar app, implemented in React. The UI is laid out using Flexbox, and is responsive.
 The normal desktop view is the calendar side by side with a list of the current selected days' events, and when
 the page is narrowed to a phone width, the events details sections wraps under the calendar.
+The days with events are denoted using the `::before` CSS psuedo-element, as a small dot under the days' number.
 
-There currently aren't any meaningful React component tests, but I have the date utility functions well tested.
+Clicking on a day number will select that as the current day, and the events view will update to show that day's events.
+Additionally, clicking a day outside of the current month will change the month view to that month.
+There is also a `Today` button to navigate back to the current day, as well as arrow buttons to switch between months.
 
-The events are randomly generated using [Faker](https://fakerjs.dev/) when the page is loaded.
+There currently aren't any meaningful React component tests, but I have some unit tests for the date utility functions since those are the most tricky parts of the app.
+
+The state management is done with the `useState()` React hook.
+
+The events are randomly generated using [Faker](https://fakerjs.dev/) when the page is loaded. It currently generates events two months in the past, and two months into the future.
 
 ## Getting Started with Create React App
 

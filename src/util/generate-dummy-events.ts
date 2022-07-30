@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'
-import { Event, EventType } from './types'
-import { getFirstDayOfPreviousMonth, getFirstDayOfNextMonth } from './util/dates'
+import { Event, EventType } from '../types'
+import { getFirstDayOfPreviousMonth, getFirstDayOfNextMonth } from './dates'
 
 type EventPartial = {
   name: string;

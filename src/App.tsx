@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Calendar } from './Calendar/Calendar'
 import { EventsView } from './EventsView/EventsView'
-import { generateDummyEvents } from './generate-dummy-events'
+import { generateDummyEvents } from './util/generate-dummy-events'
 import './App.css'
 
 function App() {
