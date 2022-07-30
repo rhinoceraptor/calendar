@@ -1,6 +1,6 @@
 import React from 'react'
 import { Event } from '../types'
-import { isSameDay } from '../util/dates'
+import { isSameDay, formatDateTime } from '../util/dates'
 import './EventsView.css'
 
 export type EventsViewProps = {
@@ -12,10 +12,16 @@ export const EventsView = ({ currentDate, events }: EventsViewProps) => (
   <div className="events-view">
     {events
       .filter(event => isSameDay(event.startDate, currentDate))
-      .sort((a, b) => b.startDate.getHours() - a.startDate.getHours())
+      .sort((a, b) => a.startDate.getHours() - b.startDate.getHours())
       .map(event => (
         <div className="event" key={event.name + event.startDate.toString()}>
           <span className="name">{event.name}</span>
+          <span className="time">
+            {!event.endDate
+              ? ' All Day'
+              : ` ${formatDateTime(event.startDate)} to ${formatDateTime(event.endDate)}`
+            }
+          </span>
           <span className="description">{event.description}</span>
         </div>
       ))

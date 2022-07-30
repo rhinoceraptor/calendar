@@ -8,12 +8,32 @@
 .event {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .name {
   font-size: 30px;
 }
 
+.name::before {
+  height: 8px;
+  width: 8px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: white;
+  content: '';
+  position: absolute;
+  white-space: pre;
+  display: inline;
+  transform: translate(-20px, 14px);
+}
+
+.time {
+  color: #8086DE;
+}
+
 .description {
   font-size: 20px;
+  color: #858cab;
 }
