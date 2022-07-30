@@ -1,5 +1,6 @@
 
 .week-days-bar {
+  font-family: 'Roboto Mono';
   display: flex;
   height: calc(100% / 7);
   color: #8086DE;

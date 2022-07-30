@@ -1,6 +1,6 @@
 import {
   getNumDaysInMonth,
-  getWeekDayNarrowFormat,
+  getDayShortName,
   getYearFormat,
   getMonthFormat,
   getDatesForCurrentMonthView
@@ -28,19 +28,19 @@ describe('utils/dates', () => {
     })
   })
 
-  describe('getWeekDayNarrowFormat', () => {
+  describe('getDayShortName', () => {
     const cases = [
-      ['S', 0],
-      ['M', 1],
-      ['T', 2],
-      ['W', 3],
-      ['T', 4],
-      ['F', 5],
-      ['S', 6]
+      ['SUN', 0],
+      ['MON', 1],
+      ['TUE', 2],
+      ['WED', 3],
+      ['THU', 4],
+      ['FRI', 5],
+      ['SAT', 6]
     ]
 
     it.each(cases)('should return %p for %p', (weekDay, weekDayNumber) => {
-      expect(getWeekDayNarrowFormat(weekDayNumber as number)).toEqual(weekDay)
+      expect(getDayShortName(weekDayNumber as number)).toEqual(weekDay)
     })
   })
 

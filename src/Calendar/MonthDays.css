@@ -1,5 +1,6 @@
 
 .month-days {
+  font-family: 'Roboto Mono';
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
